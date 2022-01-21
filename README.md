@@ -39,6 +39,22 @@ this 8 great ideas that computer architectures have been invented in the last 60
 
 ## 2.4 Signed and Unsigned Numbers
 
+- First, let's review how a computer represents numbers.
+- Humans are taught to think in base 10, but numbers may be represneted in any base.
+  - for example, 123 base 10 = 1111011 base 2.
+
+- Numbers are kept in computer hardware as a series of high and low electronic signals,
+- and so they are considered base 2 numbers.
+- (base 10 numbers are called decimal numbers , base 2 numbers are called binary numbers.)
+
+- A single digit of a binary number is thus the "atom" of computing, since all information is composed of binary digits or bits.
+- This fundamental building block can be one of 2 values,
+- which can be thought of as several alternatives:
+- high or low
+- on or off
+- true or false
+- 1 or 0 
+
 ## 2.5 Representing instructions in the computer
 
 ## chapter 4 processor
