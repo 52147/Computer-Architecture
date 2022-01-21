@@ -3,7 +3,7 @@
 exam:
 pipline
 
-重要 TA review session alexander 
+重要!!!!! TA review session alexander !!!!!!
 
 
 computer architecture CAS room 229 Thursday
