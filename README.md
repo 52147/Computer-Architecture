@@ -50,14 +50,45 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - A single digit of a binary number is thus the "atom" of computing, since all information is composed of binary digits or bits.
 - This fundamental building block can be one of 2 values,
 - which can be thought of as several alternatives:
-- high or low
-- on or off
-- true or false
-- 1 or 0 
+ - high or low
+ - on or off
+ - true or false
+ - 1 or 0
+
+- Generalizing the point, in any number base, the value of ith digit d is 
+  - d x Base i
+  - where i starts at 0 and increases from right to left.
+  - THis representatin leads to an obvious way to number the bits 
 
 ## 2.5 Representing instructions in the computer
 
 ## chapter 4 processor
+- MIPS(microprocessor without interlocked pipelined statges) architecture:
+  - is a reduced instruction set computer (RISC) instruction set architecture (ISA)
+  - developed by MIPS computer systems
+- Instruction set architecture (ISA):
+  - is the interface between the computer's software and hardware and also can be viewed as the progtammer's view of the machine.
+  - computers do not understand high-level progtamming languages such as java, c++.
+  - A processor only understand instructions encoded in some numerical fashion, usually as binary numbers.
+  - compliers translate those hight level languages into instruction that the processor can understand.
+  
+  - Beside instructions, the ISA defines items in the computer that are available to a program
+  -  --e.g., data types, registers, addressing modes, and memory.
+   - instructions locate these available items with register indexes( or names) and memory addressing modes.
+   
+  - The ISA of a computer is usually described in a small instruction manual,
+  -  which describes how the instructions are encoded.
+  -  Also, it may define short(vaguely) mnemonic names for the instructions.
+  -  The name can be recongnized by a software development called an assembler/
+     - assembler:
+     - is a computer program that translates a human-readable software programs to isolate and correct malfunction in binary computer programs.  
+
+
+- ISAs vary in quality and completeness.
+- A good ISA compromises between programmer convenience(how easy the code is to understand)
+- , size of the code(how much code is required to do a specific action),
+- cost of the computer to interpret the instructions(more complexity means more hardware needed to decode and execute the instructions),
+- and speed of the computer(with nore complex decoding hardware comes loger decode time).
 
 ## chapter 5 memory heirarchy
 - piplining
