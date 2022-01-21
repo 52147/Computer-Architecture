@@ -90,7 +90,7 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - Numbers really have an infinite number of digits, with almost all being 0 except for a few of the rightmost digits.
 - We just don't normally show leading 0s.
 
-# overflow
+### overflow
 - Hardware can be designed to add, substract, multiply, and divide these binary bit patterns.
 - if the number that is the proper result of such operations cannot be represented by these rightmost hardware bits,
 - overflow is said to have occured.
