@@ -7,7 +7,7 @@
 - 重要!!!!! TA review session alexander !!!!!!
 
 
-computer architecture CAS room 229 Thursday
+- computer architecture CAS room 229 Thursday
 
 ## first week  1/20
 
