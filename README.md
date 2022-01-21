@@ -1,5 +1,7 @@
 # Computer-Architecture
 
+mid 3/3
+final 5/12
 exam:
 pipline
 
