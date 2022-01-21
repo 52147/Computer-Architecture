@@ -58,7 +58,33 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - Generalizing the point, in any number base, the value of ith digit d is 
   - d x Base i
   - where i starts at 0 and increases from right to left.
-  - THis representatin leads to an obvious way to number the bits 
+  - THis representatin leads to an obvious way to number the bits in the word:
+    - simply use the power of the base for that bit.
+    - we subscript decimal numbers with ten and binary numbers with two
+    - for example 
+      - 1011two
+      - represents:
+      - (1x2^3) + (0x2^2) + (1x2^1) + (1x2^0)ten
+      -  = 8 + 0 +2 +1
+      -  = 11
+ 
+ - we nuber the bits 0,1,2,3,4,5...31(32 bits wide) from right to left in a word.
+ - The drawing below shows the numbering of bits with a MIPS word and the placement of the number 1011 two: 
+
+- Since words are drawn vertically as well as horizontally, 
+- leftmost and rightmost may be unclear.
+  - Hence, the pharse least significant bit is used to refer to the right most bit (bit 0 above)
+  - and most significant bit to the leftmost bit (bit 31).
+
+- The MIPS word is 32 bits long, so we can represent 2^32 different 32-bit patterns.
+- it is natural to let these combination represent the numbers from 0 to 2^32-1 (4,294,967,295 ten):
+
+
+- That is, 32-bit binary numbers can be represented in terms of the bit value times a power of 2
+- (here xi means the ith bit of x):
+   - (x31 x 2^31) + (x30 x 2^30) + (x29 x 2^29) + ... + (x1 x 2^1) + (x0 x 2^0)
+   - for reasons we will shortly see,
+   - these positive numbers are called unsigned numbers. 
 
 ## 2.5 Representing instructions in the computer
 
