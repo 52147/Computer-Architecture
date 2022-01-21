@@ -86,6 +86,18 @@ this 8 great ideas that computer architectures have been invented in the last 60
    - for reasons we will shortly see,
    - these positive numbers are called unsigned numbers. 
 
+- Keep in mind thay the binary bit patterns above are simply representatives of numbers.
+- Numbers really have an infinite number of digits, with almost all being 0 except for a few of the rightmost digits.
+- We just don't normally show leading 0s.
+
+# overflow
+- Hardware can be designed to add, substract, multiply, and divide these binary bit patterns.
+- if the number that is the proper result of such operations cannot be represented by these rightmost hardware bits,
+- overflow is said to have occured.
+
+
+
+
 ## 2.5 Representing instructions in the computer
 
 ## chapter 4 processor
