@@ -32,11 +32,17 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - computer architects have offered designs that get more performance by performing operatins  in parallel.
 5. Performance via pipelining
 - memory need to b
-6. Hierarchy of Memories
-7. Dependability via redundancy
-8.
-9.
-10.
-11.
-12.
+6. Performance via Prediction
+7.  Hierarchy of Memories
+8. Dependability via redundancy
+
+
+## 2.4 Signed and Unsigned Numbers
+
+## 2.5 Representing instructions in the computer
+
+## chapter 4 processor
+
+## chapter 5 memory heirarchy
+- piplining
 
