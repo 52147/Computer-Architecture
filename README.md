@@ -94,6 +94,48 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - Hardware can be designed to add, substract, multiply, and divide these binary bit patterns.
 - if the number that is the proper result of such operations cannot be represented by these rightmost hardware bits,
 - overflow is said to have occured.
+- It's up to the programminh language, the operating system, and the program to determine what to do if overflow occurs.
+
+- Computer programs calculate bothe positive and negative numbers,
+- so we need a representation that distinguishes the positive from the negative.
+- The most obvious solution is to add a seperate sign, which conveniently can be represneted in a single bit,
+- the name for this representation is sign and magnitude.
+
+- sign and magnitude represnetation has several shortcomings.
+  - 1. it's not obvious where to put the sign bit.
+  - 2. adders for sign and magnitude may need an extra step to set the sign because we can't know in advance what the proper sign will be.
+  - 3. a seperative sign bit means that sign and magnitude has both a positive and negative zero, which can lead to problems for inattentive programmers.
+
+- In the search for a more attractive alternative, the question arose as to what would be the result for unsigned numbers if we tried to subtract a large number from small one.
+- The answer is that it would try to borrow from a string of leading 0s, so the result would have a string of leading 1s.
+
+###  two's complement :
+- Given that there was not obvius better alternative, the final solution was to pick the representation that made the hardware simple:
+  - leading 0s means positivem, and leading 1s mean negative.
+  - This convention for representing signed binary numbers is called two's complement representation:  
+
+
+- The positive half of the numbers, from 0 to 2,147,483,647 (2^31-1),
+- use the sam representation as before.
+- The following bit pattern(1000...000 two) represents the most negative number -2,147,483,647 ten(1000...0001 two) down to -1ten(1111...1111two).
+
+- Two's complemenmt does have one negative number, -2,147,483,648 ten,
+-  that has no corresponding positive number.
+-  Such imbalance was also a worry to the inattentive programmer,
+-  but sign and magnutude had problems for both the programmer and the hardward designer.
+-  Consequently, every computer today used two's complement binary representatios for signed numbers.
+
+### A  sign bit
+- Two's complement representation has the advantage that all negative numbers have a 1 in the most significant bit.
+- hardware needs to test only this bit to see if a number is positive or negative
+- (with the number 0 considered positive).
+-  by recognizing the role of the sign bit, 
+-  we can represent positive and negative 32-bit numbers in terms of the bit value times a power of 2:
+
+    - (x31 X -2^31) + (x30 X 2^30) + (x29 X 2^29) + ... + (x1 X 2^1) + (x0 X 2^0)
+    - This sign bit is multiplied by -2^31, and the rest of the bits are then multiplied by positive versions of their respective base values.
+        
+ 
 
 
 
