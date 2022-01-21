@@ -1,11 +1,10 @@
 # Computer-Architecture
 
-mid 3/3
-final 5/12
-exam:
-pipline
+- mid 3/3 cache
+- final 5/12  pipline
 
-重要!!!!! TA review session alexander !!!!!!
+
+- 重要!!!!! TA review session alexander !!!!!!
 
 
 computer architecture CAS room 229 Thursday
