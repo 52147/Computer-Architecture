@@ -174,6 +174,43 @@ this 8 great ideas that computer architectures have been invented in the last 60
   - cost of the computer to interpret the instructions(more complexity means more hardware needed to decode and execute the instructions),
   - and speed of the computer(with nore complex decoding hardware comes loger decode time).
 
+### Example: Binary to Decimal Conversion
+- Q: 
+- What is the decimal value of this 32-bit two's complement number?
+-  1111 1111 1111 1111 1111 1111 1111 1100two
+
+- A:
+- Substituting the number's bit values into the formula above:
+- (1x-2^31) + (1x 2^30) + (1x2^29) + ... + (1x2^1) + (0x2^1) + (0x2*0)
+- = -2^31 + 2^30 + 2^29 +...+ 2^2 + 0 + 0
+- = -2,147,483,648ten + 2,147,483,644ten
+- = -4ten
+
+- We'll see a shortcut to simplify conversion from negative to positive soon.
+
+- Just as an operation on unsigned numbers can overflow the capacity of hardware to represent the result,
+- so can an operation on two's complement numbers.
+- Overflow occurs when the leftmost retained bit of the binary bit pattern is not the same as the infinite number of digits to the left(the sign bit is incorrect):
+  - a 0 on the left of the bit pattern when the number is negative or a 1 when the number is positive.
+
+### Hardware/ Software Interface
+
+Signed load & unsigned load:
+
+- Signed vs unsigned applies **to loads and to arithemetic.**
+- The function of a signed load is to copy the sign repeatedly to fill the rest of the register-- called sign extension -- but its purpose it to place a correct representation of the number within that register.
+- Unsigned loads simply fill with 0s to the left of the data,
+- since the number represented by the bit patten is unsigned.
+
+- When loading a 32-bit word into a 32-bit register, the point is moot;
+- signed and unsigned loads are identical.
+- MIPS does offer flavors of byte loads:
+  - load byte(1b) treats the byte as a signed number and thus sign-extends to fill the 24 left-most bits of the register,
+  - while load byte unsigned (1bu) works with unsigned integers.
+- Since C progtams almost always use bytes to represent characters rather than consider bytes as very short signed integers,
+- 1bu is used practically exclusively for byte loads.
+-  
+
 ## chapter 5 memory heirarchy
 - piplining
 
