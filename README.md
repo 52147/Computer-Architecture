@@ -39,13 +39,15 @@ this 8 great ideas that computer architectures have been invented in the last 60
 
 ## 2.4 Signed and Unsigned Numbers
 
+### base 2 numbers (binary number)
+
 - First, let's review how a computer represents numbers.
 - Humans are taught to think in base 10, but numbers may be represneted in any base.
   - for example, 123 base 10 = 1111011 base 2.
 
 - Numbers are kept in computer hardware as a series of **high and low electronic signals**,
 - and so they are considered base 2 numbers.
-- (base 10 numbers are called decimal numbers , base 2 numbers are called binary numbers.)
+- **(base 10 numbers are called decimal numbers , base 2 numbers are called binary numbers.)**
 
 - A single digit of a binary number is thus the "atom" of computing, since all information is composed of binary digits or bits.
 - This fundamental building block can be one of 2 values,
@@ -71,12 +73,13 @@ this 8 great ideas that computer architectures have been invented in the last 60
  - we nuber the bits 0,1,2,3,4,5...31(32 bits wide) from right to left in a word.
  - The drawing below shows the numbering of bits with a MIPS word and the placement of the number 1011 two: 
 
+### least significant bit(leftmost) & most significant bit(right most)
 - Since words are drawn vertically as well as horizontally, 
 - leftmost and rightmost may be unclear.
   - Hence, the pharse least significant bit is used to refer to the right most bit (bit 0 above)
   - and most significant bit to the leftmost bit (bit 31).
 
-- The MIPS word is 32 bits long, so we can represent 2^32 different 32-bit patterns.
+- The MIPS word is 32 bits long, so we can represent **2^32 different 32-bit patterns**.
 - it is natural to let these combination represent the numbers from 0 to 2^32-1 (4,294,967,295 ten):
 
 
@@ -94,8 +97,9 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - Hardware can be designed to add, substract, multiply, and divide these binary bit patterns.
 - if the number that is the proper result of such operations cannot be represented by these rightmost hardware bits,
 - overflow is said to have occured.
-- It's up to the programminh language, the operating system, and the program to determine what to do if overflow occurs.
+- It's up to the programming language, the operating system, and the program to determine what to do if overflow occurs.
 
+### sign and magnitude
 - Computer programs calculate bothe positive and negative numbers,
 - so we need a representation that distinguishes the positive from the negative.
 - The most obvious solution is to add a seperate sign, which conveniently can be represneted in a single bit,
@@ -111,7 +115,7 @@ this 8 great ideas that computer architectures have been invented in the last 60
 
 ###  two's complement :
 - Given that there was not obvius better alternative, the final solution was to pick the representation that made the hardware simple:
-  - leading 0s means positivem, and leading 1s mean negative.
+  - **leading 0s means positive, and leading 1s mean negative.**
   - This convention for representing signed binary numbers is called two's complement representation:  
 
 
@@ -125,8 +129,8 @@ this 8 great ideas that computer architectures have been invented in the last 60
 -  but sign and magnutude had problems for both the programmer and the hardward designer.
 -  Consequently, every computer today used two's complement binary representatios for signed numbers.
 
-### A  sign bit
-- Two's complement representation has the advantage that all negative numbers have a 1 in the most significant bit.
+### A sign bit
+- Two's complement representation has the advantage that **all negative numbers have a 1 in the most significant bit.**
 - hardware needs to test only this bit to see if a number is positive or negative
 - (with the number 0 considered positive).
 -  by recognizing the role of the sign bit, 
@@ -150,25 +154,25 @@ this 8 great ideas that computer architectures have been invented in the last 60
   - is the interface between the computer's software and hardware and also can be viewed as the progtammer's view of the machine.
   - computers do not understand high-level progtamming languages such as java, c++.
   - A processor only understand instructions encoded in some numerical fashion, usually as binary numbers.
-  - compliers translate those hight level languages into instruction that the processor can understand.
+  - **compliers translate those hight level languages into instruction that the processor can understand.**
   
   - Beside instructions, the ISA defines items in the computer that are available to a program
   -  --e.g., data types, registers, addressing modes, and memory.
    - instructions locate these available items with register indexes( or names) and memory addressing modes.
    
-  - The ISA of a computer is usually described in a small instruction manual,
+  - The ISA of a computer is usually described in **a small instruction manual,**
   -  which describes how the instructions are encoded.
   -  Also, it may define short(vaguely) mnemonic names for the instructions.
-  -  The name can be recongnized by a software development called an assembler/
+  -  The name can be recongnized by a software development called an assembler
      - assembler:
      - is a computer program that translates a human-readable software programs to isolate and correct malfunction in binary computer programs.  
 
-
-- ISAs vary in quality and completeness.
-- A good ISA compromises between programmer convenience(how easy the code is to understand)
-- , size of the code(how much code is required to do a specific action),
-- cost of the computer to interpret the instructions(more complexity means more hardware needed to decode and execute the instructions),
-- and speed of the computer(with nore complex decoding hardware comes loger decode time).
+- A good ISA:
+  - ISAs vary in quality and completeness.
+  - A good ISA compromises between programmer convenience(how easy the code is to understand)
+  - , size of the code(how much code is required to do a specific action),
+  - cost of the computer to interpret the instructions(more complexity means more hardware needed to decode and execute the instructions),
+  - and speed of the computer(with nore complex decoding hardware comes loger decode time).
 
 ## chapter 5 memory heirarchy
 - piplining
