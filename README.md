@@ -216,6 +216,19 @@ this 8 great ideas that computer architectures have been invented in the last 60
   - 0000 0000 0000 0000 0000 0000 0000 0001two + 1two
   - = 0000 0000 0000 0000 0000 0000 0000 0010two
   - = 2ten
+
+### sign extension:
+- Our next shortcut tells us how to convert a binary number represented in b bits to a number represented with nore than n bits.
+  - For example, the immediate filed in the load, store, branch, add, and set on less than instructions contains a two's complement 16-bit number,
+  - representing -32,768ten (-2^15) to 32,767ten (2^15-1).
+
+- **To add the immediate field to a 32-bit register, the computer must convert that 16 bit number to its 32-bit equivalent.**
+- The shortcut is to take the most significant bit from the smaller quantity
+- --the sign bit--and replicate it to fill the new bits of the larger quantity.
+- The old nonsign bits are simply copied into the right portion of the new word.
+- This shortcut is commonly called sign extension.
+-   
+
 ## 2.5 Representing instructions in the computer
 
 ## chapter 4 processor
