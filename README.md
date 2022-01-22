@@ -161,7 +161,7 @@ this 8 great ideas that computer architectures have been invented in the last 60
 
 ### Hardware/ Software Interface
 
-Signed load & unsigned load:
+#### Signed load & unsigned load:
 
 - Signed vs unsigned applies **to loads and to arithemetic.**
 - The function of a signed load is to copy the sign repeatedly to fill the rest of the register-- called sign extension -- but its purpose it to place a correct representation of the number within that register.
@@ -187,6 +187,35 @@ Signed load & unsigned load:
 - Some c style guides even recommend declaring the former as signed int to keep the distiction clear. 
 
 
+- Let's examine 2 useful shortcuts when working with two's complement numbers.
+- The first shortcut is a quick way to negate a two's complement binary number.
+- **Simply invert every 0 to 1 and every 1 to 0, then add one to the result.**
+- This shortcut is based on the observation that the sum of a number and its inberted representation must be 111 ... 111two, 
+- which represens -1.
+- **Since x + x' = -1,**
+- **therefore x + x' + 1 = 0 or x' + 1 = -x**
+- **(We use the notation x' to mean invert every bit in x from 0 to 1 and vice versa.)**
+
+### Example : Negation Shortcut
+
+- Negate 2ten, and then check the result by negating -2ten.
+- 2 ten = 0000 0000 0000 0000 0000 0000 0000 0010two
+
+- **x' + 1 = -x**
+- negate 2ten + 1 = - 2ten
+- Negating this number by inverting the bits and adding one,
+  - 1111 1111 1111 1111 1111 1111 1111 1101two + 1two
+  - = 1111 1111 1111 1111 1111 1111 1111 1110two
+  - = -2ten
+
+- (-x)' + 1 = x
+- negate (-2ten) + 1 = 2ten
+- Goint the other direction,
+  - 1111 1111 1111 1111 1111 1111 1111 1110two
+  - is first inverted and then incremented:
+  - 0000 0000 0000 0000 0000 0000 0000 0001two + 1two
+  - = 0000 0000 0000 0000 0000 0000 0000 0010two
+  - = 2ten
 ## 2.5 Representing instructions in the computer
 
 ## chapter 4 processor
