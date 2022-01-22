@@ -43,7 +43,7 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - Humans are taught to think in base 10, but numbers may be represneted in any base.
   - for example, 123 base 10 = 1111011 base 2.
 
-- Numbers are kept in computer hardware as a series of high and low electronic signals,
+- Numbers are kept in computer hardware as a series of **high and low electronic signals**,
 - and so they are considered base 2 numbers.
 - (base 10 numbers are called decimal numbers , base 2 numbers are called binary numbers.)
 
