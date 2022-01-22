@@ -227,7 +227,88 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - --the sign bit--and replicate it to fill the new bits of the larger quantity.
 - The old nonsign bits are simply copied into the right portion of the new word.
 - This shortcut is commonly called sign extension.
--   
+
+### Example: Sign extension shortcut
+- Convert 16-bit binary versions of 2ten and -2ten to 32-bit binary numbers.
+
+- The 16-bit binary version of the number 2 is
+- 0000 0000 0000 0010two = 2ten
+
+- It is converted to a 32-bit number by making 16 copies of the value in the most significant bit(0) and placing that in the left-hand half of the word.
+- The right half gets the old value:
+- 0000 0000 0000 0000 0000 0000 0000 0010two = 2ten
+- Let's negate the 16-bit version of 2 using the earlier shortcut. Thus,
+- 0000 0000 0000 0010two
+- becomes
+- 1111 1111 1111 1101two + 1two
+- = 1111 1111 1111 1110two
+
+- Creating a 32-bit version of the negative number means copying the sign bit 16 times and placing it on the left:
+- 1111 1111 1111 1111 1111 1111 1111 1110two = -2ten 
+
+- This trick works because positive two's complement numbers really have an infinite number of 0s on the left and negative two's complement numbers have an infinite number of 1s.
+- The binary bit pattern representing a number hides leading bits to fit the width of the hardware; sign extension simply restores some of them.
+
+
+### Summary
+- The main point of this section is that we need to represent both positive and negative integers within a computer word,
+- and although there are pros and cons to any option, the unanimous choice since 1965 has been two's complement.
+
+#### Elaboration: signed decimal numbers(-)
+- For signed decimal numbers, we used "-" to represent negative 
+- because there no limits to the size of a decimal number.
+- Given a fixed word size, 
+- binary and hexadecimal(16 base) bit strings can encode the sign;
+- hence we do not normally use "+" or "-" with binary or hexadecimal notation.
+
+- Check yourself: 
+- Q:
+- What is the decimal value of the 64-bit two's complement number?
+- 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1000two
+- A: -8ten
+
+- Explantation:
+- 1 x -2^63 + 1 x 2^62 +...+ 1 x 2^4 + 0 x 2^3 + 0 x 2^2 + 0 x 2^1 + 0 x 2^0
+- = -... + ... + 8 + 0 + 0 + 0
+- = -8ten
+
+### Elaboration: one's complement
+- Two's complement gets its name from the rule that the unsigned sum of an n-bit number and its n-bit negative is 2^n;
+- hence, the negation or complement of a number x is 2^n - x, or its "two's complement."
+
+
+- A third alternative representation to two's complement and sign and magnitude is called one's complement.
+- The neagtive of a one's complement is found by inverting each bit,
+- from 0 to 1 and from 1 to 0, or x'.
+- This relation helps explain its name since the complement of x is 2^n - x - 1.
+- It was also an attempt to be a better solution than sign and magnitude,
+- and several early scientific computer did use the notation.
+
+- This representation is similar to two's complement except that it also has two 0s:
+  - 00 ... 00two is positive 0 and 11 ... 11two is negative 0.
+  - The most negative number, 10 ... 000two, represents -2,147,483,647ten,
+  - and so the positives and negatives are balanced.
+  - One's complement adders did need an extra step to subtract a number,
+  - and hence two's complement dominates today.
+
+- A notation that represents the most negative value by 10 ... 000two
+- and the most positive value by 01 ... 11two,
+- leaving an equal number of negatives and positives but ending up with two zeros,
+- one positive(00...00two) and one negative(11 ... 11two).
+- The term is also used to mean the inversion of every bit in a pattern:
+- 0 to 1 and 1 to 0.
+
+
+### biased notation
+- A final notation, which we will look at when we discuss floating point in Chapter 3, 
+- is to represent the most negative value by 00 ... 000two and the most positive value by 11 ... 11two,
+- with 0 typically having the value 10 ... 00two.
+- This is called a biased notation,
+- since it biases the number such that the number plus the bias has a non-negative representation.
+
+
+- A notation that represents the most negative value by 00 ... 000two and the most positive value by 11 ... 11two, with 0 typically having the value 10 ... 00two, thereby biasing the number such that the number plus the bias has a non-negative representation.
+
 
 ## 2.5 Representing instructions in the computer
 
