@@ -36,6 +36,58 @@ this 8 great ideas that computer architectures have been invented in the last 60
 7.  Hierarchy of Memories
 8. Dependability via redundancy
 
+### abstraction
+
+- A typical application, such as a word processor or a large database system, may consist of millions of lines of code and rely on sophisticated software libraries that implement complex functions in support of the application.
+- As we will see, the hardware in a computer can only execute extremely simple low-level instruction.
+- To go from a complex application to the simple instructions involves several layers of software that interpret or translate high-level oparations into simple computer instructions,
+- an example of the great idea of abstraction.
+- Figure 1.3 shows that these layers of software are organized primarily in a hierarchical fashion, with applications being the outermost ring and a variety of system software sitting between the hardware and application software.
+- There are many types of systems software, but two types of systems software are central to every conputer system today:
+  - 1. an operating system(os)
+  - 2. and a compiler
+
+1. operating system:
+   - A operating system interfaces between a user's program and the hardware and provides a variety of services and supervisory functions.
+   - Among the most important functions are:
+     - 1. handling basic input and output operations
+     - 2. allocating stroage and memory
+     - 3. providing for protected sharing of the computer among multiple applications using it simultaneously.
+     - Examples of operating systems in use today are Linux, iOS, and Windows.
+
+2. Compilers: 
+   - Compilers perform another vital function:
+     - the translation of a program written in a high-leval language, such as C, C++, Java, or Visual Basic into instructions that the hardware can execute.
+     - Given the sophistication of modern programming languages and the simplicity of the instructions executed by the hardware, the translation from a high-level language program to hardware instructions is comples.
+  
+#### From a high-level language to the language of hardware
+
+##### machine language(instruction: binary number): computer can understand
+- To actually speak to electronic hardware, you need to send **electric signals.**
+- The easiest signals for computers to understand are on and of,
+- and so the computer alphabet is just two letters.
+- The 2 symbols for these two letters are the numbers 0 and 1, and we commonly think of the **computer language as number in base 2, or binary numbers.**
+- We refer to each "letter" as a binary digit or bit.
+- Computer are slaves to our commands, which are called instructions.
+- **Instructions, which are just collections of bits that the computer understand and obeys.**
+
+
+##### assembly language: assembler translate a symbolic version of instruction into binary number
+- The first programmers communicated to computers in a binary numbers,
+- but this was so tedious that they quickly invented new notations that were closer to the way humans think.
+- At first, these notatin were translated to binary by hand, but this process was stil tiresome. 
+- Using the computer to help program the computer, the pioneers invented programs to translte from symbolic notation to binary.
+- **This first of these programs was named an assembler.**
+- **This program translates a symbolic version of an instruction into the binary version.**
+  - For example, the programmer would write 
+    -  add A, B
+    -  and the assembler would translate this notation into
+    -  1000110010100000
+    -  This instruction tells the computer to add the two numbers A and B.
+    -  The name coined for this symbolic language, still used today, is assemnly language.
+    -  In contrast, the binary language that the machine understands is the machine language.   
+   
+
 
 ## 2.4 Signed and Unsigned Numbers
 
