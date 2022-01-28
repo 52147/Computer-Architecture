@@ -97,6 +97,8 @@ this 8 great ideas that computer architectures have been invented in the last 60
   - assembly language program (for MIPS)
   - => assembler =>
   - Binary machine language program (for MIPS)
+-figure 1.4 : C program compiled into assembly language and then assenbled into binary machine language.
+
    
 
 
