@@ -403,11 +403,30 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - This instruction can also be represented as field of binary numbers as opposed to decimal:
   - 000000  10001  10010  01000 00000 100000
   - 6 bits   5 bits   5 bits  5 bits  5 bits  6 bits
+  
 ### MIPS instrucion(32 bits)
 - This layout of the instruction is called instructio format.
 - As you can see from counting the number of bits, this MIPS takses exactly 32 bits -- the same size as data word.
 - In keeping with our design principlr that simplicity facors regularity,
-  - all MIPS instructions are 32 bits long.            
+  - all MIPS instructions are 32 bits long.
+
+### machine code: a sequenne of numeric version of instuctions(machine language)
+- **To distinguish it from assembly language, we call the numeric version of instuctions machine language and a sequenne of such instructions machine code.**
+- We avoid to write and read string of binary numbers by using a higher base than binary that converts easily into binary.
+- Since almost all computer data sizes are multiples of 4, hexadecimal(base 16) numbers are popular.
+- Since base 16 is a power of 2, we can trivially convert by replacing each group of 4 binary digits by a single hexadecimal digit, and vice versa.
+- Figure 2.4 converts between hexadecimal and binary.
+
+- Because we frequently deal with different base, to avoid confusion we will subscript 
+  - base 10: decimal numbers with ten,
+  - base 2: binary numbers with two,
+  - base 16: hexadecimal number with hex.
+  - (if ther is no subscript, the default is base 10.)
+  - By the way, C and Java use the notation 0xnnnn for hexadecimal numbers.  
+
+#### Binary to hecadecimal and back
+- Convert the following hecadecimal and binary numbers into the other base:
+- 
 
 ## chapter 4 processor
 - MIPS(microprocessor without interlocked pipelined statges) architecture:
