@@ -424,9 +424,27 @@ this 8 great ideas that computer architectures have been invented in the last 60
   - (if ther is no subscript, the default is base 10.)
   - By the way, C and Java use the notation 0xnnnn for hexadecimal numbers.  
 
-#### Binary to hecadecimal and back
+#### Example: Binary to hecadecimal and back
 - Convert the following hecadecimal and binary numbers into the other base:
-- 
+- eca8 6420hex
+- 0001 0011 0101 0111 1001 1011 1101 1111two
+
+#### MIPS field
+- MIPS field are given nemes to make them easier to discuss:
+  - op rs rt rd shamt funct
+  - 6 bits 5bits 5bits 5bits 6bits
+  - Here is the meaning of each name of the fields in MIPS instruction:
+    - 1. op: Basic operation of the instrucion, traditionally called the *opcode.*
+    - 2. rs: The first register source operand.
+    - 3. rt: The second register source operand.
+    - 4. rd: The register destination operand. It gets the result of the operation.
+    - 5. shamt: Shift amount
+- opcode: The field that denotes the operation and format of an instuction.
+
+- A problem occurs when an instruction needs longer field than those shown above.
+  - For example, the load word instuction must specify 2 registers and a constant.
+  - If the address were 
+
 
 ## chapter 4 processor
 - MIPS(microprocessor without interlocked pipelined statges) architecture:
@@ -462,3 +480,5 @@ this 8 great ideas that computer architectures have been invented in the last 60
 ## chapter 5 memory heirarchy
 - piplining
 
+
+## MIPS R2000 Assembly Language 
