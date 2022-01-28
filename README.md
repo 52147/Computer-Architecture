@@ -85,7 +85,18 @@ this 8 great ideas that computer architectures have been invented in the last 60
     -  1000110010100000
     -  This instruction tells the computer to add the two numbers A and B.
     -  The name coined for this symbolic language, still used today, is assemnly language.
-    -  In contrast, the binary language that the machine understands is the machine language.   
+    -  In contrast, the binary language that the machine understands is the machine language.
+
+- The recognition that a program could be written yto translate a more powerful language into computer instructions was ont of the great breakthroughs in the early days of computing.
+- Progtammers today owe their productivity to the creation of high-level progtamminh languages and compilers
+- that translate programs in such languages into instructions.
+- figures 1.4 shows the relationships among these programs and languages,
+- which are more examples of the power of abstraction.
+  - high-level language program (in C)
+  - => compiler =>
+  - assembly language program (for MIPS)
+  - => assembler =>
+  - Binary machine language program (for MIPS)
    
 
 
