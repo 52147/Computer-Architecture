@@ -375,7 +375,7 @@ this 8 great ideas that computer architectures have been invented in the last 60
   - Hence, $s0 means register 16, $s1 means register 17, $s2 means register 18,...
   - , $t0 means register 8, $t1 means register 9, and so on.
 
-- We'ss describe the  convention for the rest of the 32 registers in the following sections.
+- We'ss describe the convention for the rest of the 32 registers in the following sections.
 
 ### Translating a MIPS assembly instruction into a machine instruction
 
@@ -385,7 +385,24 @@ this 8 great ideas that computer architectures have been invented in the last 60
   - add $t0,$s1,$s2
   - first as a combination of decimal numbers and then of binary numbers.
 
-- The decimal representation is    
+- The decimal representation is
+  - 0 17  18  8  0  32
+   - Each of these segaments of an instruction is called a field.
+   - The first and last fild(containing 0 and 32 in this case):
+     -  in combination tell the MIPS computer that this instruction performs addition.
+   - The second field:
+     -  gives the number of the register that is the first source operand of the addition operation (17 = $s1),
+   - and the thrid field:
+     - gives the other source operand for the addition(18 = $s2)
+   - The fourth field:
+     - contoans the number of the register that is to receive the sum (8 = $t0).
+   - The fifth field:
+     - is unused in this instuction, so it is set to 0.
+   - Thus, this instruction adds register $s1 to $s2 and places the sum in register $t0.
+
+- This instruction can also be represented as field of binary numbers as opposed to decimal:
+  - 000000  10001  10010  01000 00000 100000
+  - 6 bits  5 bits  5 bits 5bits 5 bits 6 bits            
 
 ## chapter 4 processor
 - MIPS(microprocessor without interlocked pipelined statges) architecture:
