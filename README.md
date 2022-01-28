@@ -402,7 +402,12 @@ this 8 great ideas that computer architectures have been invented in the last 60
 
 - This instruction can also be represented as field of binary numbers as opposed to decimal:
   - 000000  10001  10010  01000 00000 100000
-  - 6 bits  5 bits  5 bits 5bits 5 bits 6 bits            
+  - 6 bits   5 bits   5 bits  5 bits  5 bits  6 bits
+### MIPS instrucion(32 bits)
+- This layout of the instruction is called instructio format.
+- As you can see from counting the number of bits, this MIPS takses exactly 32 bits -- the same size as data word.
+- In keeping with our design principlr that simplicity facors regularity,
+  - all MIPS instructions are 32 bits long.            
 
 ## chapter 4 processor
 - MIPS(microprocessor without interlocked pipelined statges) architecture:
