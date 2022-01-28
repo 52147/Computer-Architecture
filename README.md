@@ -481,4 +481,16 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - piplining
 
 
-## MIPS R2000 Assembly Language 
+## MIPS R2000 Assembly Language
+### Branch instruction
+- Branch instruction use a signed 16-bit instruction offset field; hence, they can jump 2^15 -1 instructions(not bytes) forward or 2^15 instructions backward.
+- jump instruction:
+  - contains a 26-bit address field.
+- In actual MIPS processors, branch instructions are delays branches, which do not transfer control until the instruction following the branch(its "delay slot") has executed.
+- Delayed branches affect the offset calculation,
+- since it must be computed relative to the address of the delay slot instruction(PC + 4), which is when the branch occurs.
+- SPIM does not simulatee this delay slot,
+-  unless the -bare or -delay_branch flags are specified.
+-  In assembly code, offsets are not usually specified as numbers.
+-  Instead, an instruction brach to a label, and the assembler computes the distance between the branch and the target instructions.
+-  In MIPS-32, all actual (not pseudo) 
