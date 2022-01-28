@@ -364,6 +364,29 @@ this 8 great ideas that computer architectures have been invented in the last 60
 
 ## 2.5 Representing instructions in the computer
 
+- Instructions are kept in the computer as a series of high and low electronic signals and may be represented as numbers,
+- and placing these numbers side by side by forms the instruction.
+
+- Since registers are reffered to in instructions,
+- there must be a convention to map register names into numbers.
+- In MIPS assembly language,
+  - registers $s0 to $s7 map onto registers 16 to 23, 
+  - and registers $t0 to $t7 map onto registers 8 to 15.
+  - Hence, $s0 means register 16, $s1 means register 17, $s2 means register 18,...
+  - , $t0 means register 8, $t1 means register 9, and so on.
+
+- We'ss describe the  convention for the rest of the 32 registers in the following sections.
+
+### Translating a MIPS assembly instruction into a machine instruction
+
+- Let's do the next step in the refinement of the MIPS language as an exampole.
+
+- We'll show the real MIPS language versopm of the instruction represented symbolically as
+  - add $t0,$s1,$s2
+  - first as a combination of decimal numbers and then of binary numbers.
+
+- The decimal representation is    
+
 ## chapter 4 processor
 - MIPS(microprocessor without interlocked pipelined statges) architecture:
   - is a reduced instruction set computer (RISC) instruction set architecture (ISA)
