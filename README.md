@@ -92,12 +92,16 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - that translate programs in such languages into instructions.
 - figures 1.4 shows the relationships among these programs and languages,
 - which are more examples of the power of abstraction.
+
   - high-level language program (in C)
   - => compiler =>
   - assembly language program (for MIPS)
   - => assembler =>
   - Binary machine language program (for MIPS)
+  
 -figure 1.4 : C program compiled into assembly language and then assenbled into binary machine language.
+
+
 
    
 
