@@ -102,7 +102,10 @@ this 8 great ideas that computer architectures have been invented in the last 60
 -figure 1.4 : C program compiled into assembly language and then assenbled into binary machine language.
 
 
+- A compiler enables a programmer to write this high-level language expression:
+  - A + B
 
+- The compiler wiukd compile it into this assembly language statement:
    
 
 
