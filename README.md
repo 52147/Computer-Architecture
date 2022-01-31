@@ -26,14 +26,20 @@ this 8 great ideas that computer architectures have been invented in the last 60
 2. Use abstraction to simplify design:
 - A major productivity technuque for hardware and software is to use abstractions to represne tht design at different levels of representation;
 - lower-level details are hiddento offer a simpler model at higher levels.
+
 3. Make the common case fast:
 - making the common case fast will tend to enheance performance better than optimizing the rare case.
+
 4. Performance via parallelism
-- computer architects have offered designs that get more performance by performing operatins  in parallel.
+- computer architects have offered designs that get more performance by performing operatins in parallel.
+
 5. Performance via pipelining
 - memory need to b
+
 6. Performance via Prediction
-7.  Hierarchy of Memories
+
+7. Hierarchy of Memories
+
 8. Dependability via redundancy
 
 ### abstraction
@@ -105,9 +111,23 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - A compiler enables a programmer to write this high-level language expression:
   - A + B
 
-- The compiler wiukd compile it into this assembly language statement:
-   
+- The compiler would compile it into this assembly language statement:
+  - add A, B
 
+  - As shown above, the assembler would translate this statement into the binary instructions
+  - that tell the computer to add the two numbers A and B.
+   
+### High-level programming languages's benefits
+
+- High-level programming languages offer several important benefits.
+
+- 1. First, they allow the programmer to think in a more natural language,
+- using English words and algerbraic notation, resulting in programs that look much more like text than like tables of cryptic symbols.
+- 2. The second advantage of programminh languages is improved progtammer productivity.
+- 3. The final advantage is that programminh languages allow programs to be independent of the computer on which they were developed,
+- since compiler and assemblers can translate high-level language programs to be the binary instructions of any computer.
+
+- These three advantages are so strong that today little programming is done in assembly language.
 
 ## 2.4 Signed and Unsigned Numbers
 
