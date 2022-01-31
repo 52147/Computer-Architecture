@@ -122,10 +122,10 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - High-level programming languages offer several important benefits.
 
 - 1. First, they allow the programmer to think in a more natural language,
-- using English words and algerbraic notation, resulting in programs that look much more like text than like tables of cryptic symbols.
+  - using English words and algerbraic notation, resulting in programs that look much more like text than like tables of cryptic symbols.
 - 2. The second advantage of programminh languages is improved progtammer productivity.
 - 3. The final advantage is that programminh languages allow programs to be independent of the computer on which they were developed,
-- since compiler and assemblers can translate high-level language programs to be the binary instructions of any computer.
+  - since compiler and assemblers can translate high-level language programs to be the binary instructions of any computer.
 
 - These three advantages are so strong that today little programming is done in assembly language.
 
