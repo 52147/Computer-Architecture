@@ -106,7 +106,7 @@ this 8 great ideas that computer architectures have been invented in the last 60
   - Binary machine language program (for MIPS)
   
 -figure 1.4 : C program compiled into assembly language and then assenbled into binary machine language.
-
+   
 
 - A compiler enables a programmer to write this high-level language expression:
   - A + B
@@ -128,6 +128,38 @@ this 8 great ideas that computer architectures have been invented in the last 60
   - since compiler and assemblers can translate high-level language programs to be the binary instructions of any computer.
 
 - These three advantages are so strong that today little programming is done in assembly language.
+
+### 1.4 open the covers of your computer
+
+-figure 1.5 The organization of a computer:
+- The five classic compoents of a computer are
+- 1. input : writes data to memory
+- 2. output : reads data from memory
+- 3. memory
+- 4. datapath
+- 5. control : sends the signals that determine the operations of the datapath, memory, input, and output
+   - data path and control sometimes combined and called the processpr
+   - processor: gets insturctions and data from memory.
+
+
+- Two key components of computers are input devices, such as the micro phone, and output devices, such as the speaker.
+- input feeds the computer, and output is the result of computation sent to the user.
+- Some dvices, such as wireless networks, provide both input and output to the computer.
+
+### Open Apple ipad 2
+- Figure 1.7 shows the contents of the Apple iPad 2 tablet computer.
+
+### I/O devices
+- Unsurprisingly, of the five classic components of the computer, I/O dominates this reading device.
+- The list of I/O devices includes a capacitive multitouch LCD display, front facing camera, rear facing camera, microphone, headphone jack, speakers, accelerometer, gyroscope, Wi-Fi network, and Bluetooth network.
+- The datapath, control, and memory are a tiny portion of the components.
+
+### integrated circuits (chips)
+- The small rectangles in Figure 1.8 contain the devices that drive our advancing technology, called integrated circuits and nicknamed chips.
+### processor(CPU central processor unit)
+- The A5 package seen in the middle of in Figure 1.8 contains two ARM processors that operate eith a clock rate of 1 GHz.
+- The processor is the active part of the computer, following the instructions of a program to the letter.
+- It adds numbers, tests numbers, sgnals I/O devices to activate, and so on.
 
 ## 2.4 Signed and Unsigned Numbers
 
