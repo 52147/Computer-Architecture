@@ -559,8 +559,25 @@ this 8 great ideas that computer architectures have been invented in the last 60
   - For example,
   - the first three field of the R-type and I-type formats are the same size and have the same names;
   - the length of the fourth field in I-type is equal to the sum of the lengths of the last three of R-type.
-  -  
+  
+ - In case you were wondering, the formats are distiguished by the values in the first field:
+   - each format is assigned a distinct set of values in the first field(op)
+   - so that the hardware knows whethter to treat the last half of the instruction
+   - as three field(R-type) or as a single field(I-type).
+   - Figure 2.5 shows the numbers used in each field for the MIPS instructions covered so far.
 
+instruction   |Format|op     |rs |rt |rd  |shamt|funct |address|
+-----------------------------------------------------------
+add           |  R   | 0     |reg|reg|reg |  0  | 32ten| n.a.    |
+------------------------------------------------------------------
+sub(subtract) |  R   | 0     |reg|reg|reg |  0  | 34ten| n.a.    |
+------------------------------------------------------------------
+add immediate |  I   | 8ten  |reg|reg|n.a.| n.a.| n.a. | constant|
+-------------------------------------------------------------------
+lw(load word) |  I   | 35ten |reg|reg|n.a.| n.a.| n.a. | address |
+-------------------------------------------------------------------
+sw(store woed)|  I   | 43ten |reg|reg|na.a| n.a.| n.a. | address |
+-------------------------------------------------------------------
 
 ## chapter 4 processor
 - MIPS(microprocessor without interlocked pipelined statges) architecture:
