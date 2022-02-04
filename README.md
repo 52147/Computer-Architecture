@@ -567,7 +567,7 @@ this 8 great ideas that computer architectures have been invented in the last 60
    - Figure 2.5 shows the numbers used in each field for the MIPS instructions covered so far.
 
 | instruction   | Format | op     | rs | rt | rd  | shamt | funct | address |
-| ------------ | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | add           |  R   | 0     | reg | reg | reg |  0  | 32ten | n.a.    |
 | sub(subtract)  |  R   | 0     | reg | reg | reg |  0  | 34ten | n.a.    |
 | add immediate  |  I   | 8ten  | reg | reg | n.a. | n.a. | n.a. | constant |
