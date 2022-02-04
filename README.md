@@ -93,7 +93,7 @@ this 8 great ideas that computer architectures have been invented in the last 60
     -  The name coined for this symbolic language, still used today, is assemnly language.
     -  In contrast, the binary language that the machine understands is the machine language.
 
-- The recognition that a program could be written yto translate a more powerful language into computer instructions was ont of the great breakthroughs in the early days of computing.
+- The recognition that a program could be written to translate a more powerful language into computer instructions was ont of the great breakthroughs in the early days of computing.
 - Progtammers today owe their productivity to the creation of high-level progtamminh languages and compilers
 - that translate programs in such languages into instructions.
 - figures 1.4 shows the relationships among these programs and languages,
@@ -515,7 +515,51 @@ this 8 great ideas that computer architectures have been invented in the last 60
 
 - A problem occurs when an instruction needs longer field than those shown above.
   - For example, the load word instuction must specify 2 registers and a constant.
-  - If the address were 
+  - If the address were to use one of the 5-bit fields in the format above, the constant within the load word instruction would be limited to only 2^5 or 32.
+  - This constant is used to select elements from arrays or data structures,
+  - and it often needs to be much larger than 32.
+  - This 5-bit field is too small to be useful.
+
+- Hence, we have a confilct between the desire to keep all instructions the same length and 
+- the desire to have a single instruction format.
+- This leads us to the final hardwarw design principle:
+  - Design Principle 3: Good design demands good compromises.
+
+- The compromise chosen by the MIPS designers is to keep all instructions the same length,
+- thereby requiring different kinds of instruction formats for different kinds of instruction.
+  - For example,
+  - 1. R - format:
+      - the format above is called R-type(for register) or R-format.
+  - 2. I - format:
+      -  A second type of instruction format is called I-type(for immediate) or I-format 
+      - and is used by the immediate and data transfer instructions.
+      - The fields of I-format are
+        - |  op  |  rs  |  rt  |  constant or address   |
+        - 6 bits   5 bits 5 bits    16 bits
+        - The 16-bit address means a load word instruction can load any word within a region of ± 2^15 or 32768 bytes (± 2^13 or 8192 words) of the address in the base register rs.
+        - Similarly, add immediate is limited to constants no longer than ±2^15.
+        - We see that more than 32 registers would be difficult in this format, 
+        - as the rs and rt fields would each need another bit,
+        - making it harder to fit everything in one word.
+
+- Let's look at the load word instruction from page 71:
+  - 1w   $t0,32($s3)  # Temporary reg $t0 gets A[8]
+  - Here, 19(for $s3) is placed in the rs field, 
+  - 8(for $t0) is placed in the rt field,
+  - and 32 is placed in the address field.
+  - Note that the meaning of the rt field has changed for this instruction:
+    - in a load word instruction,
+    - the rt field specifies the destination register,
+    - which receives the result of the load.
+
+### multiple formats(I, R formats) -> keep the format similar
+
+- Although multuple formats complicate the hardware,
+- we can reduce the complexity by keeping the formats similar.
+  - For example,
+  - the first three field of the R-type and I-type formats are the same size and have the same names;
+  - the length of the fourth field in I-type is equal to the sum of the lengths of the last three of R-type.
+  -  
 
 
 ## chapter 4 processor
