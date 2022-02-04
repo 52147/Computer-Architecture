@@ -574,10 +574,15 @@ this 8 great ideas that computer architectures have been invented in the last 60
 | lw(load word)  |  I   | 35ten | reg | reg | n.a. | n.a. | n.a. | address |
 | sw(store woed) |  I   | 43ten | reg | reg | na.a | n.a. | n.a. | address |
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+- Figure 2.5 MIPS instruction encoding.
+- In the table above, 
+- "reg" means a register number between 0 and 31,
+- "address" means a 16-bit address,
+- and "n.a." (not applicable) means this field does not appear in this format.
+- Note that add and sub insturctions have the same value in the op field;
+- the hardware uses the funct field to decide the variant of the opreation:
+  - add(32) or subtract (34). 
+
 
 ## chapter 4 processor
 - MIPS(microprocessor without interlocked pipelined statges) architecture:
