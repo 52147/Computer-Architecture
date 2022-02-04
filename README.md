@@ -21,7 +21,7 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - the one constant for computer designers is  rapid change, which is driven largely by Moore's Law.
 - as computer designs can take years, the resources available per chip can esaily double or qudruple between the start and finish of the project.
 - computer architects must anticipate where the technology will be when the design finishes rather than design for where it starts.
-- we use an "up and to the right" Moore's Las graph to represent designing for rapid change.
+- we use an "up and to the right" Moore's Law graph to represent designing for rapid change.
 
 2. Use abstraction to simplify design:
 - A major productivity technuque for hardware and software is to use abstractions to represne tht design at different levels of representation;
