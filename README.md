@@ -18,14 +18,14 @@ eight great ideas in computer architecture
 this 8 great ideas that computer architectures have been invented in the last 60 years of computer design:
 
 1. Design for Moore's Law:
-- the one constant for computer designers is  rapid change, which is driven largely by Moore's Law.
+- the one constant for computer designers is rapid change, which is driven largely by Moore's Law.
 - as computer designs can take years, the resources available per chip can esaily double or qudruple between the start and finish of the project.
 - computer architects must anticipate where the technology will be when the design finishes rather than design for where it starts.
 - we use an "up and to the right" Moore's Law graph to represent designing for rapid change.
 
 2. Use abstraction to simplify design:
-- A major productivity technuque for hardware and software is to use abstractions to represne tht design at different levels of representation;
-- lower-level details are hiddento offer a simpler model at higher levels.
+- A major productivity technuque for hardware and software is to use abstractions to represent tht design at different levels of representation;
+- lower-level details are hidden to offer a simpler model at higher levels.
 
 3. Make the common case fast:
 - making the common case fast will tend to enheance performance better than optimizing the rare case.
@@ -219,7 +219,7 @@ this 8 great ideas that computer architectures have been invented in the last 60
 
 ### overflow
 - Hardware can be designed to add, substract, multiply, and divide these binary bit patterns.
-- if the number that is the proper result of such operations cannot be represented by these rightmost hardware bits,
+- if the number that is the proper result of such operations **cannot be represented by these rightmost hardware bits,**
 - overflow is said to have occured.
 - It's up to the programming language, the operating system, and the program to determine what to do if overflow occurs.
 
