@@ -619,6 +619,14 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - piplining
 
 
+#### Temporal locality(locality in time) : 
+
+- The principle stating that if a data location is referenced then it will tend to be referenced again soon.
+
+#### Spatial locality (locality in space):
+- If an item is referenced, items whose address are close by will tend to be referenced soon.
+- If a data location is referenced, data locations with nearby addresses will tend to be referenced soon.
+
 ## MIPS R2000 Assembly Language
 ### Branch instruction
 - Branch instruction use a signed 16-bit instruction offset field; hence, they can jump 2^15 -1 instructions(not bytes) forward or 2^15 instructions backward.
