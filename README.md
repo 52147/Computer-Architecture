@@ -629,13 +629,13 @@ this 8 great ideas that computer architectures have been invented in the last 60
 
 #### The basic structure of the memory hierarchy
 
-| instruction   | Format | op     | rs | rt | rd  | shamt | funct | address |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| add           |  R   | 0     | reg | reg | reg |  0  | 32ten | n.a.    |
-| sub(subtract)  |  R   | 0     | reg | reg | reg |  0  | 34ten | n.a.    |
-| add immediate  |  I   | 8ten  | reg | reg | n.a. | n.a. | n.a. | constant |
-| lw(load word)  |  I   | 35ten | reg | reg | n.a. | n.a. | n.a. | address |
-| sw(store woed) |  I   | 43ten | reg | reg | na.a | n.a. | n.a. | address |
+| Speed   | Processor | Size     | Cost($/bit) | Current technology | 
+| --- | --- | --- | --- | --- |
+| Fastest | Memory | smallest | highest | SRAM |
+| --- | Memory | --- | --- | DRAM |
+| slowest | Memory | biggest | lowest | magnetic disk |
+
+
 
 - Figure 5.1 memory hierarchy:
   - By implementinh the memory system as a hierarchy, the user has the illustration of a memory that is as large as the largest level of the hierarchy,
@@ -678,7 +678,15 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - The lower level in the hierarchy is then accessed to retrieve the block containing the requested data.
 - The hit rate, or hit ratio, is the fraction of memory accesses found in the upper level;
 - it is often used as a measure of the performance of the memory hierarchy.
-- The miss rate (1-hit rate) is the fraction
+- The miss rate (1-hit rate) is the fraction of memory accessed not found in the upper level.
+- Since performance is the major reason for having a memory hierarchy,
+- the time to srevice hits and misses is important.
+- Hit time is the time to access the upper level of the memory hierarchy,
+- which includes the time needed to determine whether the access is a hit or a miss.
+- The miss penalty is the time to replace a block in the upper level with the corresponding block from the lower level,
+- plus the time to deliver this block to the processor.
+- Because the upper level is smaller and build using faster memory parts,
+- the hit time will be much smaller thatn the time to access the next level in the hierarchy.
 
 
 ## MIPS R2000 Assembly Language
