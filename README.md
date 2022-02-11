@@ -627,6 +627,60 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - If an item is referenced, items whose address are close by will tend to be referenced soon.
 - If a data location is referenced, data locations with nearby addresses will tend to be referenced soon.
 
+#### The basic structure of the memory hierarchy
+
+| instruction   | Format | op     | rs | rt | rd  | shamt | funct | address |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| add           |  R   | 0     | reg | reg | reg |  0  | 32ten | n.a.    |
+| sub(subtract)  |  R   | 0     | reg | reg | reg |  0  | 34ten | n.a.    |
+| add immediate  |  I   | 8ten  | reg | reg | n.a. | n.a. | n.a. | constant |
+| lw(load word)  |  I   | 35ten | reg | reg | n.a. | n.a. | n.a. | address |
+| sw(store woed) |  I   | 43ten | reg | reg | na.a | n.a. | n.a. | address |
+
+- Figure 5.1 memory hierarchy:
+  - By implementinh the memory system as a hierarchy, the user has the illustration of a memory that is as large as the largest level of the hierarchy,
+  - but can be accessed as if it were all built from the fastest memory.
+  - Flash memory has replaced disks in many personal mobile devices,
+  - and may lead to a new level in the storage hierarchy for desktop and server computers.
+
+- Memory hirearchy:
+  - A structure that used multiple levels of memories;
+  - as the distance from the processor increase,
+  - the size of the memories and the access time both increase.
+
+#### data
+- data is copied between only two adjacent levels at a time.
+
+- Figure 5.2 Every pair of levels in the memory hierarchy can be thought of as having upper and lower level.
+- Within each level, the unit of information that is present or not is called a block or a line.
+- Usually we transfer an entire block when we copy something between levels.
+
+1. block (or line):
+   - The minimum unit of information that can be either present or not present in a cache.
+2. hit rate:
+   - The fraction of memory accessed found in a level of the memory hierarchy.
+3. miss rate:
+   - The fraction of memory accessed not found in a level of the memory hierarchy.
+4. miss penalty:
+   - The time required to fetch a block into a level of the memory hierarchy from the lower level,
+   - including the time to access the block,
+   - transmit it from one level to the other, 
+   - insert it in the level that experienced the miss, 
+   - and then pass the block to the requestor.
+   
+#### The upper level:
+- The upper level--the one closer to the processor-- is smaller and faster than   the lower level,
+  since the upper level uses technology that is more expensive.
+- Figure 5.2 shows that the minimum unit of information that can be either present or not present in the two-level hierarchy is called a block or a line.
+
+- If the data requested by the processor appears in some block in the upper level, this is called a hit.
+- If the data is not found in the upper level, the request is called a miss.
+- The lower level in the hierarchy is then accessed to retrieve the block containing the requested data.
+- The hit rate, or hit ratio, is the fraction of memory accesses found in the upper level;
+- it is often used as a measure of the performance of the memory hierarchy.
+- The miss rate (1-hit rate) is the fraction
+
+
 ## MIPS R2000 Assembly Language
 ### Branch instruction
 - Branch instruction use a signed 16-bit instruction offset field; hence, they can jump 2^15 -1 instructions(not bytes) forward or 2^15 instructions backward.
