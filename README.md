@@ -688,6 +688,19 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - Because the upper level is smaller and build using faster memory parts,
 - the hit time will be much smaller thatn the time to access the next level in the hierarchy.
 
+- Figure 5.3
+  - This diagram shows the structure of a memory hierarchy:
+    - as the distance from the processor increases, so does the size.
+    - This structure, with the appropriate operating hierarchy and yet have a memory as large as level n.
+    - Although the local disk is normally the bottom of the hierarchy,
+    - some systems use tape or a file server over a local area network as the next levels of the hierarchy.
+
+### 5.3 The baics of caches
+- Cache was the name chosen to represent the level of the memory heirarchy between the processor and main memory.
+
+- direct-mapped cache:
+  - A cache structure in which each memory location is mapped to exactly one location in the cache. 
+- 
 
 ## MIPS R2000 Assembly Language
 ### Branch instruction
