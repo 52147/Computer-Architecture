@@ -760,3 +760,34 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - which is the library routine that prints values.
 - Which labels in Figure A.1.4 could be referebced from another file?
 - Only global labels are visible outside a file, so the onlt label that could be referenced from another files is main.
+
+
+- Since the assembler process each file in a program individually and in isolation,
+- it only knows the address of local labels.
+#### linker
+- The assembler depends on another tool,the linker, to combine a collection of object files and libraries into an exectable file by resolving external labels.
+- The assembler assists the linker by providing lists of labels and unresolved references.
+
+- However, even local labels present an interesting challenge to an assembler.
+- Unlike names in most high-level languages, assembly labels may be used before they are defined.
+- In the example in Figure A.1.4,
+- the label str is used by the la instruction before it is defined.
+
+#### forward reference : A label that is used before it is defined
+- The possibility of a forward reference, like this one,
+- forces an assembler to translate a program in 2 steps:
+- first find all labels and then produce instructions.
+- In the example, when the assemble sees the la instruction, 
+- it does not know where the word labeled str is located or even whether str labels an instruction or datum.
+
+- An assembler's first pass reads each line of an assembly file and breaks it into its component pieces.
+- These pieces, which are called lexemes, are individual works, numbers, and punctuation characters.
+- for example, the line
+- ble $t0, 100, loop
+- contains six lexemes:
+- the opcode ble,
+- the register specifier $t0,
+- a comma, 
+- the number 100,
+- a comma, and the symbol loop.
+- 
