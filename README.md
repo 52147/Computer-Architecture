@@ -715,3 +715,10 @@ this 8 great ideas that computer architectures have been invented in the last 60
 -  In assembly code, offsets are not usually specified as numbers.
 -  Instead, an instruction brach to a label, and the assembler computes the distance between the branch and the target instructions.
 -  In MIPS-32, all actual (not pseudo) 
+
+
+
+
+### A : Assemblers, Linkers, and the SPIM simulator
+
+### A.1 Introdu
