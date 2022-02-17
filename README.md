@@ -721,4 +721,42 @@ this 8 great ideas that computer architectures have been invented in the last 60
 
 ### A : Assemblers, Linkers, and the SPIM simulator
 
-### A.1 Introdu
+### A.1 Introduction
+
+- Program -> compiler -> assembler -> Linker -> computer
+- program -> assembler
+-       (assembly language program)
+- program -> compiler
+-       (high - level language program)      
+- Figure A.1.6 Assembly language either is written by a programmer or is the output of a compiler
+
+### A.2 Assemblers (assembly language into binary machine instructuin)
+- An assembler translates a file of assmebly language statements into a file of binary machine instructions and binary data.
+
+- The translation process has 2 major parts.
+- 1.
+- The first step is to find memory locations with labels 
+- so that the relationship between symbolic names and address is known when instructions are translated.
+- 2.
+- The second step is to translate each assembly statement by combining the numeric equivalents or opcodes, register specifiers, and labeks into a legal in struction.
+- As shown in Figure A.1.1, the assembler produces an output file, called an object file,
+- which contains the machine instructions, data, and bookkeeping information.
+#### object file:
+- An object file typically cannot executed, because it references procedures or data in other files.
+- A label is external (also called global) if the labeled object can be referenced from file other than the one in which it is defined.
+- local label:
+- A label is local if the object can be used only whithin the file in which it is defined.
+- In most assembler, labels are local by default and must be explicitly declared global.
+- Subroutined and global variabels require external labels since they are referenced from many files in a program.
+- Local labels hide names that should not be visible to other modules
+- for example, static functions in C, which can only be called by other functions in the same file.
+- In addition, compiler-generated names
+- for example, a name for the instruction at the begining of a loop are local so - that the compiler need not produce unique names in every file.
+
+### local and global labels
+- Consider the program in Figure A.1.4.
+- The subroutine has an external(global) visible with this assembly language file.
+- Finally, the routine also contains an unresolved reference to an external label printf,
+- which is the library routine that prints values.
+- Which labels in Figure A.1.4 could be referebced from another file?
+- Only global labels are visible outside a file, so the onlt label that could be referenced from another files is main.
