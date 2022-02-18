@@ -745,7 +745,13 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - Even after executing many instructions, some of the cahce entries may still be empty, as in Figure 5.7.
 - Thus, we need to know that the tag should be ignored for such entries.
 - The most common method is to add a valid bit to indicate whenther an entry contains a valid address.
-- If the bit is not set, there are not be a match for this block.  
+- If the bit is not set, there are not be a match for this block.
+
+### Accessing a Cache
+- Bwlow is a sequence of nine memory references to an empty eight-block cache, including the action for each reference.
+- Figure 5.9 shows how the contents of **the cache change on each miss.**
+- Since ther are eight blocks in the cache, the lower-order three bits of an address give the block number:
+- 
 
 ## MIPS R2000 Assembly Language
 ### Branch instruction
