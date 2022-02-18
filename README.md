@@ -700,7 +700,52 @@ this 8 great ideas that computer architectures have been invented in the last 60
 
 - direct-mapped cache:
   - A cache structure in which each memory location is mapped to exactly one location in the cache. 
+
+- In this section, we begin by looking at a very simple cache in which the processor request are each onw word
+- and the block also consist of a single word.
 - 
+- Figure 5.7 show such a simple cache, before and after requesting a datat item that is not initially in the cache.
+- Before the request, the cache contains a collectoin of recent references
+- X1, X2,..., Xn-1,
+- and the processor requests a word Xn that is not in the cache.
+- => This request results in a **miss**.
+- and the word Xn is brought from memory into cache.
+#### direct-mapped cache 
+- How do we know if a data item is in the cache?
+- If it is, how do we find it?
+- The answer are related.
+- If each word can go in exactly one place in the cache, 
+- then it is straightforward to find the word if it is in the cache.
+- The simplest way to assign a location in the cache for each word in the memory
+- is to assign the cache location **based on the address of the word in memory.**
+- The mapping between **address and cache location** for a direct mapped cache is usually simple.
+  - For example, almost all direct-mapped caches use this mapping to find a block:
+    - (Block address) modulo (Number of blocks in the cache)
+
+#### use mapping to find a block
+- If the  number of entries in the cache is a power of 2,
+- then modulo can be computed by using the low-order log2 (cache size in blcoks) bits of the address.
+- Thus, an 8-block cache used the three lowest bits(8 = 2^3) of the block address.
+  - for example, figure 5.8 shows how the memory address between 1ten(00001two) and 29ten(11101two) map to locations 1ten(001two) and 5ten(101two) in a direct-mapped cache of eight words.
+
+#### tags(lower 3-bit index of the address)
+- Because each cache location can contian the contents of a number of different memory locations, how do we know whether the data in the cache corresponds to a requested word?
+- That is, how do we know whether a requested word is in the cache or not?
+- We answer this question by adding a set of tags to the caches.
+- The tags contain the address information 
+- required to identify whether a word in the cache corresponds to the requested word.
+- The tags needs only to contian the upper porion of the address,
+- corresponding to the bits that are used as an index into the cache.
+  - For example, in Figure 5.8 we need only have the upper 2 of the 5 address bits in the tag,  since the lower 3-bit index field of the address selects the block.
+  - Architects omit the index bits because they are redundant, since by definition the index field of any address of a cache block must be the block number.
+#### valid bit
+- We also need a way to recongnize that a cache block does not have valid information.
+  - For instance, when a processor strarts up,
+  - the cache does not have good data, and the tags fields will be meaningless.
+- Even after executing many instructions, some of the cahce entries may still be empty, as in Figure 5.7.
+- Thus, we need to know that the tag should be ignored for such entries.
+- The most common method is to add a valid bit to indicate whenther an entry contains a valid address.
+- If the bit is not set, there are not be a match for this block.  
 
 ## MIPS R2000 Assembly Language
 ### Branch instruction
