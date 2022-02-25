@@ -612,7 +612,44 @@ this 8 great ideas that computer architectures have been invented in the last 60
   - cost of the computer to interpret the instructions(more complexity means more hardware needed to decode and execute the instructions),
   - and speed of the computer(with nore complex decoding hardware comes loger decode time).
 
+### 4.1 Introduction
+- Chapter 1 explains that the performance of a computer is determined by three factors:
+- 1. instruction count
+- 2. clock cycle time
+- 3. clock per instruction (CPI)
 
+- Chapter 2 explains that the compiler and the instrucion set architecture (ISA) determine the instruction count required for a given program.
+
+- However, the implementation of the processor determined both the clock cycle time and the number of clock cycle per instruction.
+
+- In this chapter, we construct the datapath and control unit for 2 different implementations of the MIPS instruction set.
+- This chpater is followed by a section that builds up a datapath and constructs a simple version of a processor sufficient to implement an instruction set like MIPS.
+- The other chapter covers a more realistic pipelined MIPS implementation,
+- followed by a section that develops the concepts necessary to implement more complex instruction sets, like the x86.
+
+#### A Basic MIPS implementation
+- We will be examining an implementation that includes a subset of the core MIPS instruction set:
+- 1. The memory-reference instructions load word (lw) and stroe word(sw)
+- 2. The arithmetic-logical instructions add, sub, AND, OR, and slt
+- 3. The instructions branch equal (beq) and jump(j), which we add last
+
+- This subset does not include all the integer instructions
+- (for example, shift, multiply, and divide are missing),
+- nor does it include any floating-point instructions.
+
+- However, it illustrates the key principles used in creating a datapath and designing the control.
+- The implementation of the remaining instructions is similar.
+#### An overview of the implementation
+- In chapter 2, we looked at the core MIPS instructions, including the 
+- 1. integer arithmetic-logical instructions, 
+- 2. the memeory-reference instructions, 
+- 3. and the branch instructions.
+
+- Much of what needs to be done to implement these instructions is the same.
+- For every instruction, the first 2 steps are identical:
+- 1. Send the program counter (PC) to the memory that contains the code and fetch the instruction from that memory.
+- 2. Read one or two registers, using fields of the instructions to select to select the registers to read.
+- For the load word instruction, we need to read only register, but most other instructions require reading two registers.
 
 
 ## chapter 5 memory heirarchy
