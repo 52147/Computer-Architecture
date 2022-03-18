@@ -879,10 +879,11 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - the number 100,
 - a comma, and the symbol loop.
 
+## 4.3 Building a Datapath
 
 
-
-## 4.5
+## 4.5 Overview of Pipelining
+![image](https://user-images.githubusercontent.com/79159894/158915897-644dde82-dc04-4224-95b1-7294672b34b6.png)
 
 ### Pipelining
 - pipelining: An implementation technuque in which multiple instructions are overlapped in execution, much like as assembly line.
@@ -915,6 +916,14 @@ this 8 great ideas that computer architectures have been invented in the last 60
 ### Designing MIPS instruction sets for pipelining
 -1. First, all MIPS instructions ate the same length.
     - This restriction makes it 
+    
+### 3 types of Pipeline Hazard
+- There are situations in pipelining when the next instruction cannot execute in the following clock cycle.
+- These event are called hazards, and there are 3 different types.
+
+1. structural hazards
+2. data hazards
+3. control hazards
 
 # 4.6 Pipelined Datapath and Control
 
