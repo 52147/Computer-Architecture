@@ -878,4 +878,43 @@ this 8 great ideas that computer architectures have been invented in the last 60
 - a comma, 
 - the number 100,
 - a comma, and the symbol loop.
-- 
+
+
+
+
+## 4.5
+
+### Pipelining
+- pipelining: An implementation technuque in which multiple instructions are overlapped in execution, much like as assembly line.
+- Pipelining increases the number of simultaneously executing instructions and the rate at which instructions are started and completed.
+
+###  Processor pipelining MIPS instruction-excution
+- 5 steps:
+  - 1. IF : Instruction fetch, Fetch instruction from memory.
+  - 2. ID : Register read:
+    - Read registers while decoding the instruction.
+    - The regular format of MIPS instructions allows reading and decoding to occur simultaneously.
+  - 3. EX: ALU operation: Execute the operation or calculate an address.
+  - 4. MEM: Data access: Access an operand in data memory
+  - 5. WB: Register write: Write the result into a register
+ 
+ 
+### latency
+- latency: The number of stages in a pipeline or the number of stages between two instructions during execution.
+- Pipelining does not reduce the time it takes to complete an individual instruction, also called the latency.
+  - For example, the five-stage pipeline still takes 5 clock cycles for the instruction to complete.
+  - Pipelining improves instruction throughput rather than individual instruction execution time or lantency. 
+
+### Single-cycle vs. Pipelined 
+- Compare the average time between instructions of a single-cycle implementation, in which all instructions take one clock cycle, to a pipelined implementation.
+- The operation times for the funtional units in this example are 200 ps for memory access, 200 ps for memory access, 200 ps for ALU operation, and 100 ps for register file read or write.
+- In the single-cycle model, every instruction takes exactly one clock cycle, so the clock cycle must be stretched to accommodate the slowest instruction.
+
+- Figure 4.26 shows the time required for each of the eight instructio
+
+### Designing MIPS instruction sets for pipelining
+-1. First, all MIPS instructions ate the same length.
+    - This restriction makes it 
+
+# 4.6 Pipelined Datapath and Control
+
